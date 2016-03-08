@@ -1,4 +1,4 @@
-FROM kiwenlau/hadoop-base:0.1.0
+FROM mahmoudelgamal/spark-base:latest
 
 MAINTAINER KiwenLau <kiwenlau@gmail.com>
 
@@ -12,7 +12,7 @@ RUN mkdir $HADOOP_INSTALL/logs
 RUN mv /tmp/hdfs-site.xml $HADOOP_INSTALL/etc/hadoop/hdfs-site.xml && \
 mv /tmp/core-site.xml $HADOOP_INSTALL/etc/hadoop/core-site.xml && \
 mv /tmp/mapred-site.xml $HADOOP_INSTALL/etc/hadoop/mapred-site.xml && \
-mv /tmp/yarn-site.xml $HADOOP_INSTALL/etc/hadoop/yarn-site.xml 
+mv /tmp/yarn-site.xml $HADOOP_INSTALL/etc/hadoop/yarn-site.xml
 
 RUN mv /tmp/start-ssh-serf.sh ~/start-ssh-serf.sh && \
 chmod +x ~/start-ssh-serf.sh
